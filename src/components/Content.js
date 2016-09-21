@@ -11,7 +11,7 @@ class Content extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.github.com/users/cuongw/followers')
+    fetch('https://api.github.com/users/harrytran103/followers')
       .then(res => res.json())
       .then(data => this.setState({ followers: data }))
       .catch(err => console.log('Error when fetching data...'));

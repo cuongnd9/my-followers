@@ -17,4 +17,4 @@ $ yarn start
 
 ## License
 
-![](https://img.shields.io/github/license/cuongw/my-followers.svg?style=flat-square)
+![](https://img.shields.io/github/license/harrytran103/my-followers.svg?style=flat-square)
