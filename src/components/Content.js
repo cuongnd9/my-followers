@@ -1,4 +1,5 @@
 import React from 'react';
+import { ClipLoader } from 'react-spinners';
 import FollowerItem from './FollowerItem';
 
 class Content extends React.Component {
@@ -20,9 +21,15 @@ class Content extends React.Component {
     const { followers } = this.state;
     return (
       <div>
-        {followers.map((follower, index) => (
-          <FollowerItem username={follower.login} key={index} />
-        ))}
+        {followers.length === 0 && (
+          <p className="p-5 text-center">
+            <ClipLoader sizeUnit={'px'} size={40} color={'#123abc'} />
+          </p>
+        )}
+        {followers.length > 0 &&
+          followers.map((follower, index) => (
+            <FollowerItem username={follower.login} key={index} />
+          ))}
       </div>
     );
   }
