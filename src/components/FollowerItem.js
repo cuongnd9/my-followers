@@ -1,4 +1,5 @@
 import React from 'react';
+import './FollowerItem.css';
 
 class FollowerItem extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class FollowerItem extends React.Component {
   render() {
     const { follower } = this.state;
     return (
-      <div className="d-flex w-100 p-3 align-items-center rounded border my-3">
+      <div className="card-item d-flex w-100 p-3 align-items-center rounded my-3">
         <div className="d-flex align-items-center w-100 p-3">
           <img
             className="rounded-circle mr-3"
@@ -33,7 +34,10 @@ class FollowerItem extends React.Component {
             <small className="font-weight-light text-secondary m-0 p-0">
               {follower.name}
             </small>
-            <a className="font-weight-bold text-secondary" href={`https://github.com/${follower.login}`}>
+            <a
+              className="font-weight-bold text-secondary"
+              href={`https://github.com/${follower.login}`}
+            >
               {follower.login}
             </a>
           </div>
@@ -41,9 +45,13 @@ class FollowerItem extends React.Component {
         <div className="d-flex flex-row-reverse w-100 p-3">
           <p>
             <span className="text-secondary mr-2" title="Repos">
-              {follower.public_repos}
+              {follower.followers}
             </span>
-            <i className="fab fa-github-alt text-secondary" title="Repos" />
+            <i
+              className="fa fa-github text-secondary"
+              title="Repos"
+              style={{ fontSize: '20px' }}
+            />
           </p>
         </div>
       </div>
